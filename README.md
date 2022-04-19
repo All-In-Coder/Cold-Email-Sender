@@ -16,7 +16,7 @@ How to Send Mail
       2.1 CSV file will contain email id. I am attaching a sample csv file
   3. Now you just click on the Submit button and you are good to go!!!!
 
-You can contact me on LinkedIn or my email ID
+You can contact me on LinkedIn or my email ID  
   [LinkedIn](https://www.linkedin.com/in/punit--tiwari/)  
   
   [Email](puneet.tiwari9039@gmail.com)
