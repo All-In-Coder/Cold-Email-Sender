@@ -17,5 +17,6 @@ How to Send Mail
   3. Now you just click on the Submit button and you are good to go!!!!
 
 You can contact me on LinkedIn or my email ID
-  [LinkedIn](https://www.linkedin.com/in/punit--tiwari/)
+  [LinkedIn](https://www.linkedin.com/in/punit--tiwari/)  
+  
   [Email](puneet.tiwari9039@gmail.com)
