@@ -19,3 +19,5 @@ How to Send Mail
 You can contact me on LinkedIn or my email ID  
   [LinkedIn](https://www.linkedin.com/in/punit--tiwari/)  
   [Email](puneet.tiwari9039@gmail.com)
+  
+  * You have to enable less secure app on your Gmail account, then only you will be able to send the mail (Search less secure app)
