@@ -18,5 +18,4 @@ How to Send Mail
 
 You can contact me on LinkedIn or my email ID  
   [LinkedIn](https://www.linkedin.com/in/punit--tiwari/)  
-  
   [Email](puneet.tiwari9039@gmail.com)
