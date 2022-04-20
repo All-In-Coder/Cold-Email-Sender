@@ -13,9 +13,11 @@ Changes to be Made
 How to Send Mail
   1. In navbar, first click on the Upload Resume and upload your resume
   2. After that, click on the Upload CSV
-      2.1 CSV file will contain email id. I am attaching a sample csv file
+      2.1 CSV file will contain email id. I am attaching a sample csv file (emailid.csv)
   3. Now you just click on the Submit button and you are good to go!!!!
 
 You can contact me on LinkedIn or my email ID  
   [LinkedIn](https://www.linkedin.com/in/punit--tiwari/)  
   [Email](puneet.tiwari9039@gmail.com)
+  
+  * You have to enable less secure app on your Gmail account, then only you will be able to send the mail (Search less secure app)
