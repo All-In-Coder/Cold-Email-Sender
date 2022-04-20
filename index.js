@@ -6,7 +6,11 @@ const path = require("path")
 var multer = require('multer');
 const fs = require('fs');
 const { parse } = require('fast-csv');
-
+const { ppid } = require('process');
+var bodyParser = require('body-parser')
+ 
+// create application/x-www-form-urlencoded parser
+var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 let FILE_NAME;
 
@@ -33,6 +37,8 @@ function send_email(res) {
         .on('data', row => {
             send_email_util(res, row["emailid"]);
         })
+
+        console.log("DONE");
 }
 
 
@@ -146,6 +152,18 @@ app.post('/uploadResume', (req, res) => {
             res.sendFile(__dirname + '/index.html');
         }
     })
+})
+
+
+app.get("/singleEmail", (req,res)=>{
+    res.sendFile(__dirname + '/singleEmail.html');
+})
+
+app.post('/singleEmail',urlencodedParser, (req,res)=>{
+    console.log(req.body.email);
+    send_email_util(res,req.body.email);
+    return res.redirect("/");
+
 })
 
 app.listen(port, () => console.log(`Example app listening on port 

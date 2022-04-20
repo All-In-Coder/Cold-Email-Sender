@@ -22,7 +22,8 @@
 
         .resume,
         .home,
-        .csv {
+        .csv,
+        .email {
             width: 34%;
             height: 50%;
             border: 1px solid black;
@@ -67,8 +68,8 @@
     <div class="navbar">
         <div class="home"><a href="/">Home</a></div>
         <div class="resume"><a href="/uploadResume">Upload Resume</a></div>
-        <a href="/uploadCSV">
-            <div class="csv"><a href="/uploadCSV">Upload CSV</a></div>
+        <div class="csv"><a href="/uploadCSV">Upload CSV</a></div>
+        <div class="email"><a href="/singleEmail">Upload Single Email</a></div>
     </div>
     <div class="upload">
         <form action="/uploadResume" method="post" enctype="multipart/form-data">
