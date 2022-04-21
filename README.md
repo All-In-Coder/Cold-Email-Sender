@@ -4,7 +4,7 @@ Step by Step guide to setup the project
   1. Clone the repo in your system
   2. inside the folder, run npm install
   3. After that npm start
-  4. It will run the server on localhost:3000
+  4. It will run the server on localhost:8000 (You can change the port to any other in the .env file)
 
 Changes to be Made
   1. Inside .env file, add email, password and subject
