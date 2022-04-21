@@ -15,18 +15,32 @@ var urlencodedParser = bodyParser.urlencoded({ extended: false })
 let FILE_NAME;
 
 function send_email_util(res, email) {
+    var count = 0;
     // spawn new child process to call the python script
-    const python = spawn('python', ['main.py', email]);
+    const python = spawn('python', ['main.py', JSON.stringify(email)]);
 
+    var temp = [];
     // collect data from script
     python.stdout.on('data', function (data) {
+        temp.push(data.toString());
+        // console.log()
     });
 
     // in close event we are sure that stream from child process is closed
     python.on('close', (code) => {
+        console.log(temp)
         console.log(`child process close all stdio with code ${code}`);
     });
 }
+
+function send_single_email(res,email)
+{
+    let rows = [];
+    rows.push(email);
+    console.log(rows);
+    send_email_util(res,rows);
+}
+
 
 function send_email(res) {
     let rows = [];
@@ -35,10 +49,12 @@ function send_email(res) {
         .pipe(parse({ headers: true }))
         .on('error', error => console.error(error))
         .on('data', row => {
-            send_email_util(res, row["emailid"]);
+            rows.push(row["emailid"]);
+            // send_email_util(res, row["emailid"]);
         })
-
-        console.log("DONE");
+        .on('end', ()=>{
+            send_email_util(res,rows);
+        })
 }
 
 
@@ -113,8 +129,7 @@ var uploadResume = multer({
 // Methods
 
 app.get('/', (req, res) => {
-
-    res.sendFile(__dirname + '/index.html')
+    res.sendFile(__dirname + '/index.html');
 })
 
 app.get('/uploadCSV', (req, res) => {
@@ -149,6 +164,7 @@ app.post('/uploadResume', (req, res) => {
             res.send(err)
         }
         else {
+            // res.append("show",true);
             res.sendFile(__dirname + '/index.html');
         }
     })
@@ -160,8 +176,7 @@ app.get("/singleEmail", (req,res)=>{
 })
 
 app.post('/singleEmail',urlencodedParser, (req,res)=>{
-    console.log(req.body.email);
-    send_email_util(res,req.body.email);
+    send_single_email(res,req.body.email);
     return res.redirect("/");
 
 })

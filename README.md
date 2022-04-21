@@ -15,6 +15,7 @@ How to Send Mail
   2. After that, click on the Upload CSV
       2.1 CSV file will contain email id. I am attaching a sample csv file (emailid.csv)
   3. Now you just click on the Submit button and you are good to go!!!!
+  4. You can also send single email.
 
 You can contact me on LinkedIn or my email ID  
   [LinkedIn](https://www.linkedin.com/in/punit--tiwari/)  
